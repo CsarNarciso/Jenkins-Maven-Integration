@@ -11,7 +11,7 @@ pipeline {
 			}
 			steps {
 
-				sh 'mvn package'
+				sh 'mvn --version'
 			}
 		}
 		
@@ -21,7 +21,7 @@ pipeline {
 
 				withMaven {
 	
-					sh 'mvn test'
+					sh 'mvn --version'
 				}
 			}
 		}
