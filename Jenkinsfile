@@ -3,25 +3,27 @@ pipeline {
 	agent any
 	
 	stages {
+		
+		stage("Build") {
+
+			tools {
+				maven 'Maven 3.9.6'
+			}
+			steps {
+
+				sh 'mvn clean build'
+			}
+		}
+		
+		stage("Test") {
+
+			steps {
+
+				withMaven {
 	
-		stage "Check out gut repository" {
-		
-			
-		}
-		
-		stage "Build" {
-		
-			
-		}
-		
-		stage "Test" {
-		
-			
-		}
-		
-		stage "Coverage" { 
-		
-			
+					sh 'mvn test'
+				}
+			}
 		}
 	}
 }
