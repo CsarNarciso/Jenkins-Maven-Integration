@@ -16,13 +16,10 @@ pipeline {
 		}
 		
 		stage("Test") {
-
-			steps {
-
-				withMaven {
+			
+			withMaven {
 	
-					sh 'mvn --version'
-				}
+				sh 'mvn --version'
 			}
 		}
 	}
