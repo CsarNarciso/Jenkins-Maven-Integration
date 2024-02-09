@@ -13,7 +13,7 @@ pipeline {
 
 			steps {
 
-				sh 'mvn package'
+				sh 'mvn clean generate-sources'
 			}
 		}
 		
@@ -21,7 +21,7 @@ pipeline {
 
 			steps {
 
-				sh 'mvn test'
+				sh 'mvn package'
 			}
 		}
 	}
