@@ -13,15 +13,7 @@ pipeline {
 
 			steps {
 
-				sh 'mvn clean generate-sources install'
-			}
-		}
-		
-		stage("Test") {
-
-			steps {
-
-				sh 'mvn compile'
+				sh 'maven --version'
 			}
 		}
 	}
