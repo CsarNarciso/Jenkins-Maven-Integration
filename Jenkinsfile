@@ -13,7 +13,7 @@ pipeline {
 
 			steps {
 
-				sh 'mvn clean generate-sources'
+				sh 'mvn clean generate-sources install'
 			}
 		}
 		
